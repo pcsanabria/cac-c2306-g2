@@ -1,0 +1,78 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    color:#fff;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+a{
+    color:#9b8217;
+    text-decoration: none;
+}
+a:hover{
+    color:#fff;
+}
+body{
+    background: #000;
+    padding: 20px;
+}
+
+
+
+/*HEADER*/
+header #logo{
+    text-align: center;
+}
+header #logo img{
+    max-height: 100px;
+}
+header aside#menu{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 10px;
+    align-items: center;
+}
+header aside#menu > div{
+    flex-grow: 1; /*Le asignamos un 1 para que abarque el 100%*/
+    flex-basis: 100%; /*Tamaño inicial que va a tener nuestro contenedor hijo, le damos el 100% para que en celular abarque el 100% */
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+header aside#menu > div:hover{
+    background-color:#9b8217;    
+}
+header aside#menu > div:hover a{
+    color:#fff;
+}
+
+
+
+/*CONTENT*/
+#main{
+    margin-top: 20px;
+}
+
+
+/*FOOTER*/
+footer{
+    border-top: 3px solid #9b8217;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/*PAGES*/
+body#home #title{
+    background-image: url('../images/home/title.jpg');
+    background-size: cover;
+    padding: 100px 30px;    
+    font-size: 5vw;
+}
+body#home .nosotros_texto{
+    font-size:1.3em
+}

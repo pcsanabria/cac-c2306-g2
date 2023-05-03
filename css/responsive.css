@@ -1,0 +1,48 @@
+@media only screen and (min-width: 600px) {
+    body{
+        background: #323230;
+    
+    }
+    #content{
+        width: 90%;
+        margin: 0 auto;
+        background: #000;
+        
+        border:3px #fff solid;
+    }
+
+    header #logo img{
+        max-height: 150px;
+    }
+    header aside#menu > div{ 
+        flex: 1 1 auto; /*los elementos izquierda y derecha se posicionan uno al lado del otro ocupando un ancho automático*/
+    }
+ 
+    #main {
+        margin-top: 98px;
+    }
+
+    div.col{
+        display: flex;
+    }
+    div.col div.col_1_2{
+        flex:1 1;
+        padding: 0 15px;
+    }
+
+    body#home .nosotros_texto{
+        padding:20px 50px;
+    }
+
+    #redes{
+        text-align: right;
+    }
+}
+
+
+@media only screen and (min-width: 1400px) {
+    #content{
+        width: 1260px;
+    }
+
+}
