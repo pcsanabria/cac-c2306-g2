@@ -20,6 +20,32 @@ body{
 
 
 
+/*
+GENERERICOS
+*/
+
+.mb-1{
+    margin-bottom: 10px;;
+}
+
+.mb-2{
+    margin-bottom: 20px;;
+}
+
+.mb-3{
+    margin-bottom: 30px;;
+}
+
+.field{
+    width: 100%;
+    color:#000;
+}
+.submit{
+    color:#000;
+    padding: 10px 20px;
+}
+
+
 /*HEADER*/
 header #logo{
     text-align: center;
@@ -57,6 +83,17 @@ header aside#menu > div:hover a{
 #main{
     margin-top: 20px;
 }
+
+/*LOCALES*/
+body #il img{
+    width: 400px;
+    height: 300px;
+}
+body#home .nosotros_texto_l{
+    font-size:1.3em;
+    border: 5px solid #fff;
+}
+
 
 /*MENU*/
 .tarjeta{
@@ -107,3 +144,6 @@ body#home #title{
 body#home .nosotros_texto{
     font-size:1.3em
 }
+
+
+

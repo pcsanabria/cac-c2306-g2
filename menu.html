@@ -22,21 +22,14 @@
 
 <body id="home">
     <div id="content">
-        <header>
+        <header id="header">
 
-            <aside id="menu">
-                <div><a href="#">Inicio</a></div>
-                <div><a href="#">Locales</a></div>
-                <div id="logo">
-                    <img src="images/logo.png" alt="Beer House">
-                </div>
-                <div><a href="#">Menu</a></div>
-                <div><a href="#">Contacto</a></div>
-            </aside>
+            <component v-bind:is="menu"></component>
             <div id="title">
-                <h2>Aca van las birras</h2>
+                <h2>Contactanos</h2>
             </div>
         </header>
+        
         <section id="main">
             <div class="cards" id="nosotros">
                 <div class="tarjeta">
@@ -178,7 +171,13 @@
                 </div>
             </div>
         </footer>
-        <div>
-</body>
+        
+    <div>
 
-</html>
+
+    <script>
+        var current='index';
+    </script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/vue.js"></script>            
+</body>
