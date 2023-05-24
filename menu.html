@@ -20,164 +20,83 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
 </head>
 
-<body id="menu">
-    <div id="content">
-        <header id="header">
+<body id="home">
+        <div id="content">
+            <header>
+                <aside id="menu">
+                    <div><a href="#">Inicio</a></div>
+                    <div><a href="#">Locales</a></div>
+                    <div id="logo">
+                        <a href="index.html">
+                            <img src="images/logo.png" alt="Beer House">
+                        </a>
+                    </div>
+                    <div><a href="#">Menu</a></div>
+                    <div><a href="#">Contacto</a></div>
+                </aside>
+                <div id="title">
+                    <h2>Nuestras cervezas premiadas</h2>
+                </div>
+            </header>
+            <section id="main">
+              <h2 class="texto_main">
+                Elegí que birras te llevás
+              </h2>
+                <div class="cards" id="tarjetas">
+                </div>
+            </section>
+            <footer>
+                <div class="col">
+                    <div class="col_1_2">Copyright © 2023. Todos los derechos reservados.</div>
+                    <div class="col_1_2" id="redes">
+                        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
 
-            <component v-bind:is="menu"></component>
-            <div id="title">
-                <h2>Contactanos</h2>
+  <script>
+    let url = "https://api.punkapi.com/v2/beers"; // Crea la variable local url
+    fetch(url) // Solicita los datos a la URL
+    .then((response) => response.json()) // Pone en la variable response, lo que tiene el el atributo response en el objeto json
+    .then((data) => {
+      console.log(data);
+      data.forEach((element) => { // Los array se pueden interar ya de por si, por eso tiene ese "metodo" foreach, find, reduce, filter
+        document.getElementById("tarjetas").innerHTML += // el += es necesario para concatener varios innerHTML
+        `  
+        <div class="tarjeta">
+          <div class="foto_texto">
+            <div  class="marco_foto_cerveza">
+              <img  class="foto_cerveza" src="${element.image_url}" alt="">
             </div>
-        </header>
-        
-        <section id="main">
-            <div class="cards" id="nosotros">
-                <div class="tarjeta">
-                    <div class="foto_texto">
-                        <div class="beer_image">
-                            <img src="images/home/content.jpg" alt="">
-                        </div>
-                        <div class="beer_text">
-                            <p>Blonde</p>
-                            <p>La cerveza blonde tiene un sabor etc etc etc</p>
-                            <p>IBU: 6</p>
-                            <p>Al: 4.5%</p>
-                        </div>
-                    </div>
-                    <div class="shop">
-                        <div class="price">
-                            <p>Precio: AR$ 400.00 </p>
-                        </div>
-                        <div class="buy">
-                            <button class="purchase_button">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="tarjeta">
-                    <div class="foto_texto">
-                        <div class="beer_image">
-                            <img src="images/home/content.jpg" alt="">
-                        </div>
-                        <div class="beer_text">
-                            <p>Blonde</p>
-                            <p>La cerveza blonde tiene un sabor etc etc etc</p>
-                            <p>IBU: 6</p>
-                            <p>Al: 4.5%</p>
-                        </div>
-                    </div>
-                    <div class="shop">
-                        <div class="price">
-                            <p>Precio: AR$ 400.00 </p>
-                        </div>
-                        <div class="buy">
-                            <button class="purchase_button">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="tarjeta">
-                    <div class="foto_texto">
-                        <div class="beer_image">
-                            <img src="images/home/content.jpg" alt="">
-                        </div>
-                        <div class="beer_text">
-                            <p>Blonde</p>
-                            <p>La cerveza blonde tiene un sabor etc etc etc</p>
-                            <p>IBU: 6</p>
-                            <p>Al: 4.5%</p>
-                        </div>
-                    </div>
-                    <div class="shop">
-                        <div class="price">
-                            <p>Precio: AR$ 400.00 </p>
-                        </div>
-                        <div class="buy">
-                            <button class="purchase_button">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="tarjeta">
-                    <div class="foto_texto">
-                        <div class="beer_image">
-                            <img src="images/home/content.jpg" alt="">
-                        </div>
-                        <div class="beer_text">
-                            <p>Blonde</p>
-                            <p>La cerveza blonde tiene un sabor etc etc etc</p>
-                            <p>IBU: 6</p>
-                            <p>Al: 4.5%</p>
-                        </div>
-                    </div>
-                    <div class="shop">
-                        <div class="price">
-                            <p>Precio: AR$ 400.00 </p>
-                        </div>
-                        <div class="buy">
-                            <button class="purchase_button">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="tarjeta">
-                    <div class="foto_texto">
-                        <div class="beer_image">
-                            <img src="images/home/content.jpg" alt="">
-                        </div>
-                        <div class="beer_text">
-                            <p>Blonde</p>
-                            <p>La cerveza blonde tiene un sabor etc etc etc</p>
-                            <p>IBU: 6</p>
-                            <p>Al: 4.5%</p>
-                        </div>
-                    </div>
-                    <div class="shop">
-                        <div class="price">
-                            <p>Precio: AR$ 400.00 </p>
-                        </div>
-                        <div class="buy">
-                            <button class="purchase_button">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="tarjeta">
-                    <div class="foto_texto">
-                        <div class="beer_image">
-                            <img src="images/home/content.jpg" alt="">
-                        </div>
-                        <div class="beer_text">
-                            <p>Blonde</p>
-                            <p>La cerveza blonde tiene un sabor etc etc etc</p>
-                            <p>IBU: 6</p>
-                            <p>Al: 4.5%</p>
-                        </div>
-                    </div>
-                    <div class="shop">
-                        <div class="price">
-                            <p>Precio: AR$ 400.00 </p>
-                        </div>
-                        <div class="buy">
-                            <button class="purchase_button">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-               
+            <div class="texto_cerveza">
+                <p>${element.name}</p>
+                <p>${element.description}</p>
+                <p>IBU: ${element.ibu}</p>
+              <p>Al: ${element.abv} %</p>
             </div>
-
-        </section>
-        <footer>
-            <div class="col">
-                <div class="col_1_2">Copyright © 2023. Todos los derechos reservados.</div>
-                <div class="col_1_2" id="redes">
-                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
-                </div>
+          </div>
+          <div class="shop">
+            <div class="price">
+              <p>Precio: AR$ 400.00 </p>
             </div>
-        </footer>
-        
-    <div>
-
-
+            <div class="buy">
+              <button class="boton_compra">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>`;
+          });
+        });
+    </script>
     <script>
         var current='index';
     </script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/vue.js"></script>            
-</body>
+
+  </body>
+</html>
+
+
+
