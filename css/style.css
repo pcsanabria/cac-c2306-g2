@@ -61,6 +61,7 @@ header aside#menu{
     text-align: center;
     padding: 10px;
     align-items: center;
+    
 }
 header aside#menu > div{
     flex-grow: 1; /*Le asignamos un 1 para que abarque el 100%*/
@@ -69,6 +70,10 @@ header aside#menu > div{
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 3px;
+    order:2;
+}
+header aside#menu > div#logo{
+    order:1;
 }
 header aside#menu > div:hover{
     background-color:#9b8217;    
@@ -146,8 +151,7 @@ body#home .nosotros_texto{
 }
 
 
-body#contacto .contenedor{
-    width: 400px;
+body#contacto .contenedor{    
     background-color: #9b8217;
     padding: 30px;
     margin: auto;

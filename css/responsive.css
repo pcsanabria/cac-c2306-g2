@@ -16,7 +16,11 @@
     }
     header aside#menu > div{ 
         flex: 1 1 auto; /*los elementos izquierda y derecha se posicionan uno al lado del otro ocupando un ancho automático*/
+        order:1;
     }
+    header aside#menu > div#logo{
+        order:1;
+    } 
  
     #main {
         margin-top: 98px;
