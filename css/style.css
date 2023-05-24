@@ -146,4 +146,14 @@ body#home .nosotros_texto{
 }
 
 
+body#contacto .contenedor{
+    width: 400px;
+    background-color: #9b8217;
+    padding: 30px;
+    margin: auto;
+    border-radius: 4px;    
+    color: #000;
+}
+
+
 
