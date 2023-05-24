@@ -100,9 +100,20 @@ body#home .nosotros_texto_l{
 }
 
 
+.texto_main{
+    font-size: xx-large;
+    padding: 25px;
+}
+
 /*MENU*/
 .tarjeta{
     display: flex;
+}
+
+.marco_foto_cerveza{
+    padding: 15px;
+    height: auto;
+    width: 25%;
 }
 
 .foto_texto{
@@ -111,16 +122,18 @@ body#home .nosotros_texto_l{
     width: 75%;
 }
 
-.beer_image{
+.foto_cerveza{
     padding: 15px;
+    height: auto;
     width: 25%;
 }
 
-.beer_text{
+.texto_cerveza{
     padding: 15px;
+    width: 75%;
 }
 
-.purchase_button{
+.boton_compra{
     color: white;
     width: 100%;
     background-color: teal;
@@ -142,6 +155,13 @@ footer{
 /*PAGES*/
 body#home #title{
     background-image: url('../images/home/title.jpg');
+    background-size: cover;
+    padding: 100px 30px;    
+    font-size: 5vw;
+}
+
+body#menu #title{
+    background-image: url('../images/home/menu.jpg');
     background-size: cover;
     padding: 100px 30px;    
     font-size: 5vw;
