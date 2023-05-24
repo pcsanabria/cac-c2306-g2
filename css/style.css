@@ -154,6 +154,13 @@ body#home #title{
     padding: 100px 30px;    
     font-size: 5vw;
 }
+
+body#menu #title{
+    background-image: url('../images/home/menu.jpg');
+    background-size: cover;
+    padding: 100px 30px;    
+    font-size: 5vw;
+}
 body#home .nosotros_texto{
     font-size:1.3em
 }
