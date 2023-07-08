@@ -73,6 +73,14 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+td{
+    border-bottom: 1px #ccc solid;
+    padding: 10px;
+}
+.delete{
+    background-color: #cc0000 !important;
+}
+
 
 input[type="submit"]:hover {
     background-color: #0056b3;
