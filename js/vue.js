@@ -15,7 +15,7 @@ const header = Vue.createApp({
                 </div>
                 <div><a href="menu.html">Menu</a></div>
                 <div><a href="contacto.html">Contacto</a></div>
-                <div><a href="../backend/crud/carrito.html">🛒</a></div>
+                <div><a href="carrito.html">🛒</a></div>
             </aside>`}        
     }
 }).mount("#header")
