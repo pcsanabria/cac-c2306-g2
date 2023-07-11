@@ -1,5 +1,5 @@
 /* Estilos para todo el proyecto */
-td,th,label, input[type="text"]{
+td,th,label, input[type="text"], input[type="number"]{
     color:#000 !important;
 }
 body {
