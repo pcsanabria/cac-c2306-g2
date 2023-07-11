@@ -1,4 +1,7 @@
 /* Estilos para todo el proyecto */
+td,th,label, input[type="text"]{
+    color:#000 !important;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
@@ -118,4 +121,9 @@ a {
 
 a:hover {
     background-color: #cd7b00;
+}
+
+
+td,th{
+    text-align: left;
 }

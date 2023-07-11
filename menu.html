@@ -58,8 +58,8 @@
         </div>
 
   <script>
-    let url = "https://psanabria.pythonanywhere.com/productos"; // Crea la variable local url
-    fetch(url) // Solicita los datos a la URL
+    let url = "https://psanabria.pythonanywhere.com"; // Crea la variable local url
+    fetch(url+"/productos") // Solicita los datos a la URL
     .then((response) => response.json()) // Pone en la variable response, lo que tiene el el atributo response en el objeto json
     .then((data) => {
       console.log(data);
@@ -69,7 +69,7 @@
         <div class="tarjeta">
           <div class="foto_texto">
             <div  class="marco_foto_cerveza">
-             <img  class="foto_cerveza" src="${element.image_url}" alt="">
+             <img  class="foto_cerveza" src="images/cerveza.jpg" alt="">
             </div>
             <div class="texto_cerveza">
                 <p>${element.titulo}</p>
@@ -84,7 +84,7 @@
               <p>Precio: AR$ 400.00 </p>
             </div>
             <div class="buy">
-            <button  @click="agregarAlCarrito(producto)" class="boton_compra">Agregar al carrito</button>
+            <button onclick="agregarAlCarrito(${element.codigo})" class="boton_compra">Agregar al carrito</button>
             </div>
           </div>
         </div>`;
@@ -93,43 +93,15 @@
     </script>
     <script>
         var current='index';
-    </script>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="js/vue.js">
-
-// Agregar al carrito
-
-const app = Vue.createApp({
-      data() {
-        return {
-          productos: [],
-          mostrarCarrito: false,
-          carrito: [],
-        }
-      },
-      created() {
-        this.obtenerProductos()
-      },
-      methods: {
-        obtenerProductos() {
-          fetch(URL + 'productos')
-            .then(response => response.json())
-            .then(data => {
-              this.productos = data
-            })
-            .catch(error => {
-              console.error(URL + 'productos', error)
-              alert('Error al obtener los productos.')
-            })
-        },
-        agregarAlCarrito(producto) {
-          fetch(URL + 'carrito', {
+        function agregarAlCarrito(codigo)
+        {
+          fetch(url + '/carrito', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-              codigo: producto.codigo,
+              codigo: codigo,
               cantidad: 1, // Agregamos una unidad al carrito
             }),
           })
@@ -140,47 +112,10 @@ const app = Vue.createApp({
             .catch(error => {
               console.error('Error al agregar el producto al carrito:', error)
               alert('Error al agregar el producto al carrito.')
-            })
-        },
-        restarDelCarrito(producto) {
-          fetch(URL + 'carrito', {
-            method: 'DELETE',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              codigo: producto.codigo,
-              cantidad: 1, // Restamos una unidad del carrito
-            }),
-          })
-            .then(response => response.json())
-            .then(data => {
-              alert(data.message)
-            })
-            .catch(error => {
-              console.error('Error al restar el producto del carrito:', error)
-              alert('Error al restar el producto del carrito.')
-            })
-        },
-        obtenerCarrito() {
-          fetch(URL + 'carrito')
-            .then(response => response.json())
-            .then(data => {
-              this.carrito = data
-              this.mostrarCarrito = true
-            })
-            .catch(error => {
-              console.error('Error al obtener el carrito:', error)
-              alert('Error al obtener el carrito.')
-            })
-        },
-      },
-    })
-    app.mount('#app')
+            })          
 
-
-
-
-
-    </script>            
+        }
+    </script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+              
 </body>
