@@ -76,12 +76,13 @@
                 <p>${element.descripcion}</p>
                 <p>IBU: ${element.ibu}</p>
               <p>Al: ${element.ai} %</p>
-              <p>Codigo: ${element.codigo} %</p>
+              <p>Codigo: ${element.codigo}</p>
+              <p>Disponible: ${element.cantidad}</p>
             </div>
           </div>
           <div class="shop">
             <div class="price">
-              <p>Precio: AR$ 400.00 </p>
+              <p>Precio: $ ${element.precio} </p>
             </div>
             <div class="buy">
             <button onclick="agregarAlCarrito(${element.codigo})" class="boton_compra">Agregar al carrito</button>
