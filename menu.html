@@ -58,7 +58,7 @@
         </div>
 
   <script>
-    let url = "https://api.punkapi.com/v2/beers"; // Crea la variable local url
+    let url = "https://psanabria.pythonanywhere.com/productos/"; // Crea la variable local url
     fetch(url) // Solicita los datos a la URL
     .then((response) => response.json()) // Pone en la variable response, lo que tiene el el atributo response en el objeto json
     .then((data) => {
@@ -69,13 +69,14 @@
         <div class="tarjeta">
           <div class="foto_texto">
             <div  class="marco_foto_cerveza">
-              <img  class="foto_cerveza" src="${element.image_url}" alt="">
+             // <img  class="foto_cerveza" src="${element.image_url}" alt="">
             </div>
             <div class="texto_cerveza">
-                <p>${element.name}</p>
-                <p>${element.description}</p>
+                <p>${element.titulo}</p>
+                <p>${element.descripcion}</p>
                 <p>IBU: ${element.ibu}</p>
-              <p>Al: ${element.abv} %</p>
+              <p>Al: ${element.ai} %</p>
+              <p>Codigo: ${element.codigo} %</p>
             </div>
           </div>
           <div class="shop">
